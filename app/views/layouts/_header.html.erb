@@ -18,19 +18,29 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="home">Obleke</a>
+                        <%= link_to "Obleke", root_url, :class => 'navbar-link' %>
                     </li>
+                    <% if !user_signed_in? %>
                     <li class="page-scroll">
+                     <%= link_to "Registracija", new_user_registration_path, :class => 'navbar-link'  %> 
+                     </li> 
+                     <% end %>  
+                      <% if user_signed_in? %>
+                        <li class="page-scroll">
+                     <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %>
+                     </li>   
+                            <li class="page-scroll">
+                            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                            </li>                
+                    <% else %>
+                    <li class="page-scroll"> 
+                    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
                     </li>
-                        <a href="/users/sign_up">Registracija</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/users/sign_in">Prijava</a>
-                    </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <br/>
+    
