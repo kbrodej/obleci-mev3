@@ -21,11 +21,24 @@
                         <a href="#portfolio">Obleke</a>
                     </li>
                     <li class="page-scroll">
+<<<<<<< HEAD
+                        <a href="devise/registrations#new">Registracija</a>
+                    </li>
+                    <li class="page-scroll">
+                        <%= link_to "Prijava", new_user_session_path, :class => 'navbar-link'  %>
+                    </li>
+                    <% if user_signed_in? %>
+                 
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
+<% end %>
+=======
                         <a href="#about">Registracija</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Prijava</a>
                     </li>
+>>>>>>> 6dbebef94d7f31b82680292d0a8955669933926d
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
