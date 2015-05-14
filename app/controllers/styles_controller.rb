@@ -6,9 +6,7 @@ class StylesController < ApplicationController
   def index
     @styles = Style.all
   end
-    def email
-    @email=User.find(:id= style.user_id)
-  end
+
   # GET /styles/1
   # GET /styles/1.json
   def show
@@ -66,7 +64,7 @@ end
       format.html { redirect_to styles_url, notice: 'Style was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
