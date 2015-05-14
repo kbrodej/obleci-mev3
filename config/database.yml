@@ -15,12 +15,12 @@
 # gem 'pg'
 #
 default: &default
-  host: ec2-54-163-226-9.compute-1.amazonaws.com
+  host: ec2-107-22-187-89.compute-1.amazonaws.com
   adapter: postgresql
   encoding: unicode
-  database: d1jb6lgcn8l4fu
-  username: dsorznavygebrw
-  password: 4TwI4jYwHimWpvV-alIPnbdtnv
+  database: d6frdt7tfddfba
+  username: htxbtoaqeyhjfn
+  password: 8XntmZ1qZEB0Fa6lJozGENQ6Qa
   port: 5432
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -28,7 +28,7 @@ default: &default
 
 development:
   <<: *default
-  database: d1jb6lgcn8l4fu
+  database: d6frdt7tfddfba
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
