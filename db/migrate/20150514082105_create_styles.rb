@@ -1,9 +1,9 @@
 class CreateStyles < ActiveRecord::Migration
   def change
     create_table :styles do |t|
-      t.text :name
+      t.string :name
       t.text :description
-      t.integer :user_id
+      t.string :picture
 
       t.timestamps null: false
     end

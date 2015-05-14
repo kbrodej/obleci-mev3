@@ -18,7 +18,7 @@ class StylesControllerTest < ActionController::TestCase
 
   test "should create style" do
     assert_difference('Style.count') do
-      post :create, style: { description: @style.description, name: @style.name, user_id: @style.user_id }
+      post :create, style: { description: @style.description, name: @style.name, picture: @style.picture }
     end
 
     assert_redirected_to style_path(assigns(:style))
@@ -35,7 +35,7 @@ class StylesControllerTest < ActionController::TestCase
   end
 
   test "should update style" do
-    patch :update, id: @style, style: { description: @style.description, name: @style.name, user_id: @style.user_id }
+    patch :update, id: @style, style: { description: @style.description, name: @style.name, picture: @style.picture }
     assert_redirected_to style_path(assigns(:style))
   end
 

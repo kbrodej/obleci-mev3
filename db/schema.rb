@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150504074442) do
-=======
-ActiveRecord::Schema.define(version: 20150504082406) do
->>>>>>> e73fa231ad940673e849c01bdb14b2689f88028d
+ActiveRecord::Schema.define(version: 20150514072305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150504082406) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "picture"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,13 +46,10 @@ ActiveRecord::Schema.define(version: 20150504082406) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
-<<<<<<< HEAD
-=======
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
->>>>>>> e73fa231ad940673e849c01bdb14b2689f88028d
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

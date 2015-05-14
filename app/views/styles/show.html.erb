@@ -11,12 +11,9 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @style.user_id %>
+  <strong>Picture:</strong>
+<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 </p>
-
-<%= @style.picture %>
-<%= image_tag(@style.picture_url, :width => 600) if @style.picture.present? %>
 
 <%= link_to 'Edit', edit_style_path(@style) %> |
 <%= link_to 'Back', styles_path %>

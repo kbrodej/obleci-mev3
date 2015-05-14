@@ -51,11 +51,6 @@ class StylesController < ApplicationController
     end
   end
 
-
-
-  
-end
-
   # DELETE /styles/1
   # DELETE /styles/1.json
   def destroy
@@ -64,7 +59,7 @@ end
       format.html { redirect_to styles_url, notice: 'Style was successfully destroyed.' }
       format.json { head :no_content }
     end
-  
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -74,6 +69,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def style_params
-      params.require(:style).permit(:name, :description, :user_id)
+      params.require(:style).permit(:name, :description, :picture)
     end
 end
