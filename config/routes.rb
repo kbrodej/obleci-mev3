@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :styles
 
-root 'static_pages#home'
+#root 'static_pages#home'
+root :to => redirect('/styles')
 
   get 'static_pages/about'
 
