@@ -18,10 +18,11 @@
     <% @styles.each do |style| %>
                 <div class="col-sm-4 portfolio-item">
                  <% if user_signed_in? %>
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal1" class="portfolio-link" >
                         <div class="caption">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+
+                                <%= link_to 'Details', style %>
                             </div>
 
                         </div>
@@ -38,32 +39,7 @@
                 </div>
            
        
- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:10000;">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2><%= style.name %></h2>
-                            <hr class="star-primary">
-                          
-                        <center >
-                        <%= image_tag(style.picture,  :width => 600) %>
-                        </center>
-                        <h3><%= style.description %></h3>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
         
 

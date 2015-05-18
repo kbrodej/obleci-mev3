@@ -2,20 +2,36 @@
 
 <p id="notice" ><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @style.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @style.description %>
-</p>
+ 
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                       <center > <div class="modal-body">
+                            <h2><%= @style.name %></h2>
+                            <hr class="star-primary"></enter >
+                          
+                        <center >
+                        <%= image_tag(@style.picture_url, :width => 600) if @style.picture.present? %>
+                        </center>
+                        <br>
+                       <center><%= link_to 'Back', styles_path, :class => 'btn btn-default' %>
+                               <%= link_to 'Edit', edit_style_path(@style), :class => 'btn btn-default' %> 
+                        <h3><%= @style.description %></h3>
+                            </center >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
 
-<p>
-  <strong>Picture:</strong>
-<%= image_tag(@style.picture_url, :width => 600) if @style.picture.present? %>
-</p>
 
-<%= link_to 'Edit', edit_style_path(@style) %> |
-<%= link_to 'Back', styles_path %>
+
