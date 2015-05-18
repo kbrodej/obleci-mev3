@@ -23,7 +23,9 @@
                         </center>
                         <br>
                        <center><%= link_to 'Back', styles_path, :class => 'btn btn-default' %>
+                                <% if current_user.id == @style.id_user %>
                                <%= link_to 'Edit', edit_style_path(@style), :class => 'btn btn-default' %> 
+                               <% end %>
                         <h3><%= @style.description %></h3>
                             </center >
                         </div>
